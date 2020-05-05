@@ -80,23 +80,24 @@ class LoginVC: ScrollViewController {
             make.top.equalTo(self.applicantIdentifierTextField.snp.bottom).offset(StyleSheet.Offsets.l)
             make.bottom.equalTo(self.scrollView).inset(StyleSheet.Offsets.l).priorityHigh()
         }
+        
+        let debugButton = UIButton()
+        self.view.addSubview(debugButton)
+        debugButton.addTarget(self, action: #selector(fillTestData), for: UIControl.Event.touchUpInside)
+        debugButton.snp.makeConstraints { (make) in
+            make.bottom.right.equalTo(self.view)
+            make.size.equalTo(44.0)
+        }
     }
     
     @objc private func continueButtonPressed(_ button: UIButton) {
-        print("button pressed")
         guard
-            var name = self.loginTextField.textField.text,
-            var pass = self.passwordTextField.textField.text,
-            var applicantId = self.applicantIdentifierTextField.textField.text else {
-            print("Some field is empty")
+            let name = self.loginTextField.textField.text,
+            let pass = self.passwordTextField.textField.text,
+            let applicantId = self.applicantIdentifierTextField.textField.text else {
             return
         }
         self.continueButton.startLoadingAnimation()
-        
-        // Test data, remove!
-        name = name.count < 1 ? "ios_test_task_andrey_krasivichev_test" : name
-        pass = pass.count < 1 ? "Xahpow-1cuwku-qopvec" : pass
-        applicantId = applicantId.count < 1 ? "5ea987670a975a052caea49c" : applicantId
         
         var loginRequest: ApiRequest = ApiRequestFactory.loginRequestWithUsername(name, password: pass)
         let successHandler: ObjectHandler = ObjectHandlerFactory.handlerWithBlock { [weak self] (info) in
@@ -129,5 +130,12 @@ class LoginVC: ScrollViewController {
         shouldEnable = shouldEnable && (self.passwordTextField.textField.text?.count ?? 0) > 0
         shouldEnable = shouldEnable && (self.applicantIdentifierTextField.textField.text?.count ?? 0) > 0
         self.continueButton.isEnabled = shouldEnable
+    }
+    
+    @objc private func fillTestData() {
+        self.loginTextField.textField.text = "ios_test_task_andrey_krasivichev_test"
+        self.passwordTextField.textField.text = "Xahpow-1cuwku-qopvec"
+        self.applicantIdentifierTextField.textField.text = "5ea987670a975a052caea49c"
+        self.continueButton.isEnabled = true
     }
 }
