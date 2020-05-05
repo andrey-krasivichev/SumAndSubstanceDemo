@@ -1,6 +1,0 @@
-framework module IdensicMobileSDK_Liveness3D {
-  umbrella header "IdensicMobileSDK_Liveness3D.h"
-
-  export *
-  module * { export * }
-}
