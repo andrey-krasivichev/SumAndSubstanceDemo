@@ -1,0 +1,6 @@
+module Pods_SumAndSubstanceDemo {
+  umbrella header "Pods-SumAndSubstanceDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
