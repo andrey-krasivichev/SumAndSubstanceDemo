@@ -34,8 +34,8 @@ class LoginVC: ScrollViewController {
         return textView
     }()
     
-    lazy private(set) var continueButton: UIButton = {
-        let button = UIButton()
+    lazy private(set) var continueButton: LoadingSupportButton = {
+        let button = LoadingSupportButton()
         button.setTitle("Continue", for: UIControl.State.normal)
         button.setTitleColor(StyleSheet.Colors.mainGreen, for: UIControl.State.normal)
         button.setContentCompressionResistancePriority(priority: UILayoutPriority.required)
@@ -79,5 +79,43 @@ class LoginVC: ScrollViewController {
     
     @objc private func continueButtonPressed(_ button: UIButton) {
         print("button pressed")
+        guard
+            var name = self.loginTextField.textField.text,
+            var pass = self.passwordTextField.textField.text,
+            var applicantId = self.applicantIdentifierTextField.textField.text else {
+            print("Some field is empty")
+            return
+        }
+        self.continueButton.startLoadingAnimation()
+        
+        // Test data, remove!
+        name = name.count < 1 ? "ios_test_task_andrey_krasivichev_test" : name
+        pass = pass.count < 1 ? "Xahpow-1cuwku-qopvec" : pass
+        applicantId = applicantId.count < 1 ? "5ea987670a975a052caea49c" : applicantId
+        
+        var loginRequest: ApiRequest = ApiRequestFactory.loginRequestWithUsername(name, password: pass)
+        let successHandler: ObjectHandler = ObjectHandlerFactory.handlerWithBlock { [weak self] (info) in
+            guard
+                let self = self,
+                let answer = info as? [String: Any],
+                let token = answer.stringForKey("payload"),
+                token.count > 0
+            else {
+                print("no required answer")
+                return
+            }
+            self.uiService.showIdensicScreen(token: token, applicantId: applicantId)
+            self.continueButton.stopLoadingAnimation()
+        }
+        let errorHandler = ErrorHandlerFactory.handlerWithBlock { [weak self] (error) in
+            guard let self = self else {
+                return
+            }
+            self.uiService.showErrorAlertMessage(error.localizedDescription)
+            self.continueButton.stopLoadingAnimation()
+        }
+        loginRequest.dataHandler = DataHandlerFactory.jsonDataHandler(jsonHandler: successHandler, parseErrorHandler: errorHandler)
+        loginRequest.errorHandler = errorHandler
+        self.apiService.sendRequest(loginRequest)
     }
 }

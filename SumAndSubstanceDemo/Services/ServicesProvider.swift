@@ -11,6 +11,7 @@ import Foundation
 protocol ServicesProviderUsage {
     var servicesProvider: ServicesProvider { get }
     var uiService: UIService { get }
+    var apiService: ApiService { get }
 }
 
 class ServicesProvider {
@@ -21,10 +22,18 @@ class ServicesProvider {
     lazy private(set) var notificationCenter: NotificationCenter = {
         return NotificationCenter()
     }()
+    
+    lazy private(set) var apiService: ApiService = {
+        return ApiService()
+    }()
 }
 
 extension ServicesProviderUsage {
     var uiService: UIService {
         return self.servicesProvider.uiService
+    }
+    
+    var apiService: ApiService {
+        return self.servicesProvider.apiService
     }
 }

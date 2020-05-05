@@ -326,6 +326,31 @@ extension String {
     }
 }
 
+extension String {
+    func encodeToBase64() -> String? {
+        guard let data = self.data(using: Encoding.utf8) else {
+            return nil
+        }
+        return data.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
+    }
+    
+    func decodeFromBase64() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+        return String(bytes: data, encoding: Encoding.utf8)
+    }
+}
+
+typealias VoidBlock = () -> Void
+
+func RedispatchToMainThread(_ block: @escaping VoidBlock) {
+    if Thread.current.isMainThread {
+        block()
+        return
+    }
+    DispatchQueue.main.async(execute: block)
+}
 
 #if DEBUG
 class Utils {

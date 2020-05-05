@@ -27,6 +27,15 @@
 		C736718A246164DA0084D7F0 /* KeyboardChangesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367189246164DA0084D7F0 /* KeyboardChangesHandler.swift */; };
 		C736718C246167030084D7F0 /* LabeledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736718B246167030084D7F0 /* LabeledTextFieldView.swift */; };
 		C736718E24616BA30084D7F0 /* ContentViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736718D24616BA30084D7F0 /* ContentViewContainer.swift */; };
+		C7367190246171500084D7F0 /* LoadingSupportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736718F246171500084D7F0 /* LoadingSupportButton.swift */; };
+		C7367192246171E60084D7F0 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367191246171E60084D7F0 /* ApiService.swift */; };
+		C7367195246173AD0084D7F0 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367194246173AD0084D7F0 /* ApiRequest.swift */; };
+		C7367197246173C70084D7F0 /* ApiMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367196246173C70084D7F0 /* ApiMethod.swift */; };
+		C7367199246174D00084D7F0 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367198246174D00084D7F0 /* DataHandler.swift */; };
+		C736719B246174D90084D7F0 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736719A246174D90084D7F0 /* ErrorHandler.swift */; };
+		C736719D2461AC030084D7F0 /* ObjectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736719C2461AC030084D7F0 /* ObjectHandler.swift */; };
+		C736719F2461ACF70084D7F0 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736719E2461ACF70084D7F0 /* ApiResponse.swift */; };
+		C73671A22461AFF20084D7F0 /* ErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73671A12461AFF20084D7F0 /* ErrorFactory.swift */; };
 		FFFAD8FA08044E07CF906396 /* libPods-SumAndSubstanceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EBACA91685E09AE69785A /* libPods-SumAndSubstanceDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +65,15 @@
 		C7367189246164DA0084D7F0 /* KeyboardChangesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardChangesHandler.swift; sourceTree = "<group>"; };
 		C736718B246167030084D7F0 /* LabeledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextFieldView.swift; sourceTree = "<group>"; };
 		C736718D24616BA30084D7F0 /* ContentViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewContainer.swift; sourceTree = "<group>"; };
+		C736718F246171500084D7F0 /* LoadingSupportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSupportButton.swift; sourceTree = "<group>"; };
+		C7367191246171E60084D7F0 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		C7367194246173AD0084D7F0 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		C7367196246173C70084D7F0 /* ApiMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMethod.swift; sourceTree = "<group>"; };
+		C7367198246174D00084D7F0 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		C736719A246174D90084D7F0 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		C736719C2461AC030084D7F0 /* ObjectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectHandler.swift; sourceTree = "<group>"; };
+		C736719E2461ACF70084D7F0 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		C73671A12461AFF20084D7F0 /* ErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,7 @@
 				C7367157246157B30084D7F0 /* AppDelegate.swift */,
 				C7367170246159C80084D7F0 /* Utils */,
 				C736716B2461597A0084D7F0 /* Services */,
+				C73671A02461AFD80084D7F0 /* Errors */,
 				C7367188246164370084D7F0 /* Handlers */,
 				C7367185246162A50084D7F0 /* CustomViews */,
 				C736718224615FE50084D7F0 /* ViewControllers */,
@@ -127,6 +146,7 @@
 			children = (
 				C736716C246159970084D7F0 /* ServicesProvider.swift */,
 				C736716D246159980084D7F0 /* UIService.swift */,
+				C7367193246171F90084D7F0 /* ApiService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +182,7 @@
 			children = (
 				C7367186246162C80084D7F0 /* TextFieldFactory.swift */,
 				C736718B246167030084D7F0 /* LabeledTextFieldView.swift */,
+				C736718F246171500084D7F0 /* LoadingSupportButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -169,8 +190,30 @@
 		C7367188246164370084D7F0 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				C7367198246174D00084D7F0 /* DataHandler.swift */,
+				C736719A246174D90084D7F0 /* ErrorHandler.swift */,
+				C736719C2461AC030084D7F0 /* ObjectHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		C7367193246171F90084D7F0 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				C7367191246171E60084D7F0 /* ApiService.swift */,
+				C7367194246173AD0084D7F0 /* ApiRequest.swift */,
+				C7367196246173C70084D7F0 /* ApiMethod.swift */,
+				C736719E2461ACF70084D7F0 /* ApiResponse.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		C73671A02461AFD80084D7F0 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C73671A12461AFF20084D7F0 /* ErrorFactory.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,15 +338,24 @@
 				C736718A246164DA0084D7F0 /* KeyboardChangesHandler.swift in Sources */,
 				C736718024615FC80084D7F0 /* LoginVC.swift in Sources */,
 				C736717A246159D30084D7F0 /* UIView+QuickFrameProperties.swift in Sources */,
+				C73671A22461AFF20084D7F0 /* ErrorFactory.swift in Sources */,
 				C736717C246159D30084D7F0 /* Utils.swift in Sources */,
+				C7367197246173C70084D7F0 /* ApiMethod.swift in Sources */,
 				C736718E24616BA30084D7F0 /* ContentViewContainer.swift in Sources */,
+				C736719B246174D90084D7F0 /* ErrorHandler.swift in Sources */,
+				C736719D2461AC030084D7F0 /* ObjectHandler.swift in Sources */,
 				C736716F246159980084D7F0 /* UIService.swift in Sources */,
+				C736719F2461ACF70084D7F0 /* ApiResponse.swift in Sources */,
+				C7367190246171500084D7F0 /* LoadingSupportButton.swift in Sources */,
+				C7367199246174D00084D7F0 /* DataHandler.swift in Sources */,
 				C736716E246159980084D7F0 /* ServicesProvider.swift in Sources */,
 				C7367184246160360084D7F0 /* ScrollViewController.swift in Sources */,
 				C7367179246159D30084D7F0 /* UINavigationController.swift in Sources */,
+				C7367192246171E60084D7F0 /* ApiService.swift in Sources */,
 				C736717B246159D30084D7F0 /* UIDevice+Extensions.swift in Sources */,
 				C736717E246159D30084D7F0 /* UIView+ContentPriority.swift in Sources */,
 				C7367158246157B30084D7F0 /* AppDelegate.swift in Sources */,
+				C7367195246173AD0084D7F0 /* ApiRequest.swift in Sources */,
 				C7367178246159D30084D7F0 /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
