@@ -30,8 +30,7 @@ class UIService: NSObject, ServicesProviderUsage {
     
     func showIdensicScreen(token: String, applicantId: String) {
         
-        let testToken = "7j2Gfy88e1f1LurtWS92L1fd152BG39VSjWq6zYDvQyVAKJsWXK3aA=="
-        let sdk = SNSMobileSDK(baseUrl: self.apiService.baseUrl, applicantId: applicantId, accessToken: testToken, locale: nil, supportEmail: nil)
+        let sdk = SNSMobileSDK(baseUrl: self.apiService.baseUrl, applicantId: applicantId, accessToken: token, locale: nil, supportEmail: nil)
         self.idensicSDK = sdk
         guard sdk.isReady else {
             self.showErrorAlertMessage(sdk.verboseStatus)
