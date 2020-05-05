@@ -9,10 +9,11 @@
 import UIKit
 
 class ScrollViewController: BasicViewController {
-
+    
     lazy private(set) var scrollView: UIScrollView = {
         let scrollView = UIScrollView(frame: self.view.bounds)
-        self.view.addSubview(scrollView)
+        scrollView.delaysContentTouches = false
+        self.contentView.addSubview(scrollView)
         return scrollView
     }()
     
@@ -26,7 +27,7 @@ class ScrollViewController: BasicViewController {
         super.setupConstraints()
         
         self.scrollView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view)
+            make.edges.equalTo(self.contentView)
         }
     }
 }

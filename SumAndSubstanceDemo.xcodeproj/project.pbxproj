@@ -24,6 +24,9 @@
 		C736718024615FC80084D7F0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736717F24615FC80084D7F0 /* LoginVC.swift */; };
 		C7367184246160360084D7F0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367183246160360084D7F0 /* ScrollViewController.swift */; };
 		C7367187246162C80084D7F0 /* TextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367186246162C80084D7F0 /* TextFieldFactory.swift */; };
+		C736718A246164DA0084D7F0 /* KeyboardChangesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367189246164DA0084D7F0 /* KeyboardChangesHandler.swift */; };
+		C736718C246167030084D7F0 /* LabeledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736718B246167030084D7F0 /* LabeledTextFieldView.swift */; };
+		C736718E24616BA30084D7F0 /* ContentViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736718D24616BA30084D7F0 /* ContentViewContainer.swift */; };
 		FFFAD8FA08044E07CF906396 /* libPods-SumAndSubstanceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EBACA91685E09AE69785A /* libPods-SumAndSubstanceDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		C736717F24615FC80084D7F0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C7367183246160360084D7F0 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		C7367186246162C80084D7F0 /* TextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFactory.swift; sourceTree = "<group>"; };
+		C7367189246164DA0084D7F0 /* KeyboardChangesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardChangesHandler.swift; sourceTree = "<group>"; };
+		C736718B246167030084D7F0 /* LabeledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextFieldView.swift; sourceTree = "<group>"; };
+		C736718D24616BA30084D7F0 /* ContentViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				C7367157246157B30084D7F0 /* AppDelegate.swift */,
 				C7367170246159C80084D7F0 /* Utils */,
 				C736716B2461597A0084D7F0 /* Services */,
+				C7367188246164370084D7F0 /* Handlers */,
 				C7367185246162A50084D7F0 /* CustomViews */,
 				C736718224615FE50084D7F0 /* ViewControllers */,
 				C736715D246157B30084D7F0 /* Main.storyboard */,
@@ -133,6 +140,7 @@
 				C7367172246159D30084D7F0 /* UINavigationController.swift */,
 				C7367177246159D30084D7F0 /* UIView+ContentPriority.swift */,
 				C7367173246159D30084D7F0 /* UIView+QuickFrameProperties.swift */,
+				C7367189246164DA0084D7F0 /* KeyboardChangesHandler.swift */,
 				C7367175246159D30084D7F0 /* Utils.swift */,
 			);
 			path = Utils;
@@ -141,6 +149,7 @@
 		C736718224615FE50084D7F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C736718D24616BA30084D7F0 /* ContentViewContainer.swift */,
 				C736715B246157B30084D7F0 /* BasicViewController.swift */,
 				C7367183246160360084D7F0 /* ScrollViewController.swift */,
 				C736717F24615FC80084D7F0 /* LoginVC.swift */,
@@ -152,8 +161,16 @@
 			isa = PBXGroup;
 			children = (
 				C7367186246162C80084D7F0 /* TextFieldFactory.swift */,
+				C736718B246167030084D7F0 /* LabeledTextFieldView.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		C7367188246164370084D7F0 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +291,12 @@
 				C7367187246162C80084D7F0 /* TextFieldFactory.swift in Sources */,
 				C736715C246157B30084D7F0 /* BasicViewController.swift in Sources */,
 				C736717D246159D30084D7F0 /* StyleSheet.swift in Sources */,
+				C736718C246167030084D7F0 /* LabeledTextFieldView.swift in Sources */,
+				C736718A246164DA0084D7F0 /* KeyboardChangesHandler.swift in Sources */,
 				C736718024615FC80084D7F0 /* LoginVC.swift in Sources */,
 				C736717A246159D30084D7F0 /* UIView+QuickFrameProperties.swift in Sources */,
 				C736717C246159D30084D7F0 /* Utils.swift in Sources */,
+				C736718E24616BA30084D7F0 /* ContentViewContainer.swift in Sources */,
 				C736716F246159980084D7F0 /* UIService.swift in Sources */,
 				C736716E246159980084D7F0 /* ServicesProvider.swift in Sources */,
 				C7367184246160360084D7F0 /* ScrollViewController.swift in Sources */,
