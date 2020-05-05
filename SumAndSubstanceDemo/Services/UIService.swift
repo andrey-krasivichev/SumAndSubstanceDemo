@@ -18,6 +18,7 @@ class UIService: NSObject, ServicesProviderUsage {
     init(servicesProvider: ServicesProvider) {
         self.servicesProvider = servicesProvider
         super.init()
+        NotificationCenter.default.addObserver(self, selector: #selector(invalidateSizeOfTextField(_:)), name: UITextField.textDidChangeNotification, object: nil)
     }
 
     lazy private(set) var appWindow: UIWindow = {
@@ -56,6 +57,13 @@ class UIService: NSObject, ServicesProviderUsage {
             fatalError("controller must exist")
         }
         return vc.topVC()
+    }
+    
+    @objc private func invalidateSizeOfTextField(_ notification: Notification) {
+        guard let field = notification.object as? UITextField else {
+            return
+        }
+        field.invalidateIntrinsicContentSize()
     }
 }
 

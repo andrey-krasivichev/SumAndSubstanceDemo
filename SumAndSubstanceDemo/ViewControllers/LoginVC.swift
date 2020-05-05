@@ -13,6 +13,7 @@ class LoginVC: ScrollViewController {
     lazy private(set) var loginTextField: LabeledTextFieldView = {
         let textView = LabeledTextFieldView()
         textView.label.text = "Login"
+        textView.textField.addTarget(self, action: #selector(enableButtonIfFieldsAreValid), for: .editingChanged)
         textView.textField.placeholder = "Enter login"
         self.scrollView.addSubview(textView)
         return textView
@@ -22,6 +23,7 @@ class LoginVC: ScrollViewController {
         let textView = LabeledTextFieldView()
         textView.label.text = "Password"
         textView.textField.placeholder = "Enter password"
+        textView.textField.addTarget(self, action: #selector(enableButtonIfFieldsAreValid), for: .editingChanged)
         self.scrollView.addSubview(textView)
         return textView
     }()
@@ -30,6 +32,7 @@ class LoginVC: ScrollViewController {
         let textView = LabeledTextFieldView()
         textView.label.text = "Applicant ID"
         textView.textField.placeholder = "Enter Identifier"
+        textView.textField.addTarget(self, action: #selector(enableButtonIfFieldsAreValid), for: .editingChanged)
         self.scrollView.addSubview(textView)
         return textView
     }()
@@ -38,9 +41,11 @@ class LoginVC: ScrollViewController {
         let button = LoadingSupportButton()
         button.setTitle("Continue", for: UIControl.State.normal)
         button.setTitleColor(StyleSheet.Colors.mainGreen, for: UIControl.State.normal)
+        button.setTitleColor(StyleSheet.Colors.mainGreen.withAlphaComponent(0.5), for: UIControl.State.disabled)
         button.setContentCompressionResistancePriority(priority: UILayoutPriority.required)
         button.addTarget(self, action: #selector(continueButtonPressed(_:)), for: UIControl.Event.touchUpInside)
         button.applyHalfVisibilityOnStateChanged()
+        button.isEnabled = false
         self.scrollView.addSubview(button)
         return button
     }()
@@ -117,5 +122,12 @@ class LoginVC: ScrollViewController {
         loginRequest.dataHandler = DataHandlerFactory.jsonDataHandler(jsonHandler: successHandler, parseErrorHandler: errorHandler)
         loginRequest.errorHandler = errorHandler
         self.apiService.sendRequest(loginRequest)
+    }
+    
+    @objc private func enableButtonIfFieldsAreValid() {
+        var shouldEnable = (self.loginTextField.textField.text?.count ?? 0) > 0
+        shouldEnable = shouldEnable && (self.passwordTextField.textField.text?.count ?? 0) > 0
+        shouldEnable = shouldEnable && (self.applicantIdentifierTextField.textField.text?.count ?? 0) > 0
+        self.continueButton.isEnabled = shouldEnable
     }
 }

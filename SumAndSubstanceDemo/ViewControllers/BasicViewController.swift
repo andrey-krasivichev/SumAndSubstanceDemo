@@ -82,26 +82,6 @@ class BasicViewController: UIViewController, ServicesProviderUsage, ContentViewC
                 self.view.layoutIfNeeded()
             })
         }
-
-        self.keyboardChangesHandler.keyboardWillShowBlock = { [weak self] (from: CGRect, to: CGRect, animateInterval: TimeInterval) -> () in
-            /*
-            guard let self = self else {
-                return
-            }
-
-            let firstResponder = UIResponder.currentFirst() as? UIView
-            if let activeTextInput = firstResponder, activeTextInput is UITextInput {
-                let scrollView = self.view.allSubviews(uiView: self.view).first(where: { $0 is UIScrollView && activeTextInput.superviews().contains($0) }) as? UIScrollView
-                if let scrollView = scrollView {
-                    if let textView = activeTextInput as? UITextView {
-                        scrollView.scrollToView(textView: textView, animated: true)
-                    } else {
-                        scrollView.scrollToView(view: activeTextInput, animated: true)
-                    }
-                }
-            }*/
-        }
-
         self.keyboardChangesHandler.beginObserving()
     }
     
