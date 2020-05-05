@@ -342,6 +342,12 @@ extension String {
     }
 }
 
+extension Data {
+    var hexDescription: String {
+        return reduce("") {$0 + String(format: "%02x", $1)}
+    }
+}
+
 typealias VoidBlock = () -> Void
 
 func RedispatchToMainThread(_ block: @escaping VoidBlock) {

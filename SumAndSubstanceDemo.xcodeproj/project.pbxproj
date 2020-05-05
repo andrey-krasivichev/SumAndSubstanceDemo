@@ -36,6 +36,7 @@
 		C736719D2461AC030084D7F0 /* ObjectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736719C2461AC030084D7F0 /* ObjectHandler.swift */; };
 		C736719F2461ACF70084D7F0 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736719E2461ACF70084D7F0 /* ApiResponse.swift */; };
 		C73671A22461AFF20084D7F0 /* ErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73671A12461AFF20084D7F0 /* ErrorFactory.swift */; };
+		C7414B892461DBFC00246BD4 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7414B882461DBFC00246BD4 /* Crypto.swift */; };
 		FFFAD8FA08044E07CF906396 /* libPods-SumAndSubstanceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EBACA91685E09AE69785A /* libPods-SumAndSubstanceDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		C736719C2461AC030084D7F0 /* ObjectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectHandler.swift; sourceTree = "<group>"; };
 		C736719E2461ACF70084D7F0 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		C73671A12461AFF20084D7F0 /* ErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFactory.swift; sourceTree = "<group>"; };
+		C7414B882461DBFC00246BD4 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				C7367173246159D30084D7F0 /* UIView+QuickFrameProperties.swift */,
 				C7367189246164DA0084D7F0 /* KeyboardChangesHandler.swift */,
 				C7367175246159D30084D7F0 /* Utils.swift */,
+				C7414B882461DBFC00246BD4 /* Crypto.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				C7367187246162C80084D7F0 /* TextFieldFactory.swift in Sources */,
 				C736715C246157B30084D7F0 /* BasicViewController.swift in Sources */,
 				C736717D246159D30084D7F0 /* StyleSheet.swift in Sources */,
+				C7414B892461DBFC00246BD4 /* Crypto.swift in Sources */,
 				C736718C246167030084D7F0 /* LabeledTextFieldView.swift in Sources */,
 				C736718A246164DA0084D7F0 /* KeyboardChangesHandler.swift in Sources */,
 				C736718024615FC80084D7F0 /* LoginVC.swift in Sources */,

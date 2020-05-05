@@ -45,7 +45,8 @@ class ApiService {
             if let httpResponse = response as? HTTPURLResponse {
                 let statusCode = httpResponse.statusCode
                 if statusCode != 200 {
-                    // handle error
+                    let answer = String(data: data ?? Data(), encoding: String.Encoding.utf8) ?? "empty answer"
+                    print("\(answer)")
                     return
                 }
             }

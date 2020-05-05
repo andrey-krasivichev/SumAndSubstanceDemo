@@ -104,7 +104,7 @@ class LoginVC: ScrollViewController {
             guard
                 let self = self,
                 let answer = info as? [String: Any],
-                let token = answer.stringForKey("payload"),
+                let token = answer.stringForKey("token"),
                 token.count > 0
             else {
                 print("no required answer")
@@ -135,7 +135,7 @@ class LoginVC: ScrollViewController {
     @objc private func fillTestData() {
         self.loginTextField.textField.text = "ios_test_task_andrey_krasivichev_test"
         self.passwordTextField.textField.text = "Xahpow-1cuwku-qopvec"
-        self.applicantIdentifierTextField.textField.text = "5ea987670a975a052caea49c"
+        self.applicantIdentifierTextField.textField.text = "5ea987670a975a052caea49b"
         self.continueButton.isEnabled = true
     }
 }
