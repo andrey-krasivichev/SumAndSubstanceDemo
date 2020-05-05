@@ -3,27 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C7367158246157B30084D7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367157246157B30084D7F0 /* AppDelegate.swift */; };
-		C736715A246157B30084D7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367159246157B30084D7F0 /* SceneDelegate.swift */; };
-		C736715C246157B30084D7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736715B246157B30084D7F0 /* ViewController.swift */; };
+		C736715C246157B30084D7F0 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736715B246157B30084D7F0 /* BasicViewController.swift */; };
 		C736715F246157B30084D7F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C736715D246157B30084D7F0 /* Main.storyboard */; };
 		C7367161246157B50084D7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7367160246157B50084D7F0 /* Assets.xcassets */; };
 		C7367164246157B50084D7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7367162246157B50084D7F0 /* LaunchScreen.storyboard */; };
+		C736716E246159980084D7F0 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736716C246159970084D7F0 /* ServicesProvider.swift */; };
+		C736716F246159980084D7F0 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736716D246159980084D7F0 /* UIService.swift */; };
+		C7367178246159D30084D7F0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367171246159D30084D7F0 /* UIColor+Hex.swift */; };
+		C7367179246159D30084D7F0 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367172246159D30084D7F0 /* UINavigationController.swift */; };
+		C736717A246159D30084D7F0 /* UIView+QuickFrameProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367173246159D30084D7F0 /* UIView+QuickFrameProperties.swift */; };
+		C736717B246159D30084D7F0 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367174246159D30084D7F0 /* UIDevice+Extensions.swift */; };
+		C736717C246159D30084D7F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367175246159D30084D7F0 /* Utils.swift */; };
+		C736717D246159D30084D7F0 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367176246159D30084D7F0 /* StyleSheet.swift */; };
+		C736717E246159D30084D7F0 /* UIView+ContentPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367177246159D30084D7F0 /* UIView+ContentPriority.swift */; };
+		C736718024615FC80084D7F0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736717F24615FC80084D7F0 /* LoginVC.swift */; };
+		C7367184246160360084D7F0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367183246160360084D7F0 /* ScrollViewController.swift */; };
+		C7367187246162C80084D7F0 /* TextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7367186246162C80084D7F0 /* TextFieldFactory.swift */; };
+		FFFAD8FA08044E07CF906396 /* libPods-SumAndSubstanceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135EBACA91685E09AE69785A /* libPods-SumAndSubstanceDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0252EF380E1E5B8454968E34 /* Pods-SumAndSubstanceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumAndSubstanceDemo.debug.xcconfig"; path = "Target Support Files/Pods-SumAndSubstanceDemo/Pods-SumAndSubstanceDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		135EBACA91685E09AE69785A /* libPods-SumAndSubstanceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SumAndSubstanceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D1E028273D543510479555 /* Pods-SumAndSubstanceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumAndSubstanceDemo.release.xcconfig"; path = "Target Support Files/Pods-SumAndSubstanceDemo/Pods-SumAndSubstanceDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C7367154246157B30084D7F0 /* SumAndSubstanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SumAndSubstanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7367157246157B30084D7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7367159246157B30084D7F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C736715B246157B30084D7F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C736715B246157B30084D7F0 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		C736715E246157B30084D7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7367160246157B50084D7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7367163246157B50084D7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7367165246157B50084D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C736716C246159970084D7F0 /* ServicesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
+		C736716D246159980084D7F0 /* UIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
+		C7367171246159D30084D7F0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		C7367172246159D30084D7F0 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		C7367173246159D30084D7F0 /* UIView+QuickFrameProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+QuickFrameProperties.swift"; sourceTree = "<group>"; };
+		C7367174246159D30084D7F0 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		C7367175246159D30084D7F0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C7367176246159D30084D7F0 /* StyleSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
+		C7367177246159D30084D7F0 /* UIView+ContentPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ContentPriority.swift"; sourceTree = "<group>"; };
+		C736717F24615FC80084D7F0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C7367183246160360084D7F0 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		C7367186246162C80084D7F0 /* TextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFAD8FA08044E07CF906396 /* libPods-SumAndSubstanceDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AF3296E98FFF5FE2A4BD687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				135EBACA91685E09AE69785A /* libPods-SumAndSubstanceDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		898392AC633AC043DB3951B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0252EF380E1E5B8454968E34 /* Pods-SumAndSubstanceDemo.debug.xcconfig */,
+				58D1E028273D543510479555 /* Pods-SumAndSubstanceDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C736714B246157B30084D7F0 = {
 			isa = PBXGroup;
 			children = (
 				C7367156246157B30084D7F0 /* SumAndSubstanceDemo */,
 				C7367155246157B30084D7F0 /* Products */,
+				898392AC633AC043DB3951B7 /* Pods */,
+				7AF3296E98FFF5FE2A4BD687 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +103,57 @@
 			isa = PBXGroup;
 			children = (
 				C7367157246157B30084D7F0 /* AppDelegate.swift */,
-				C7367159246157B30084D7F0 /* SceneDelegate.swift */,
-				C736715B246157B30084D7F0 /* ViewController.swift */,
+				C7367170246159C80084D7F0 /* Utils */,
+				C736716B2461597A0084D7F0 /* Services */,
+				C7367185246162A50084D7F0 /* CustomViews */,
+				C736718224615FE50084D7F0 /* ViewControllers */,
 				C736715D246157B30084D7F0 /* Main.storyboard */,
 				C7367160246157B50084D7F0 /* Assets.xcassets */,
 				C7367162246157B50084D7F0 /* LaunchScreen.storyboard */,
 				C7367165246157B50084D7F0 /* Info.plist */,
 			);
 			path = SumAndSubstanceDemo;
+			sourceTree = "<group>";
+		};
+		C736716B2461597A0084D7F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C736716C246159970084D7F0 /* ServicesProvider.swift */,
+				C736716D246159980084D7F0 /* UIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C7367170246159C80084D7F0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C7367176246159D30084D7F0 /* StyleSheet.swift */,
+				C7367171246159D30084D7F0 /* UIColor+Hex.swift */,
+				C7367174246159D30084D7F0 /* UIDevice+Extensions.swift */,
+				C7367172246159D30084D7F0 /* UINavigationController.swift */,
+				C7367177246159D30084D7F0 /* UIView+ContentPriority.swift */,
+				C7367173246159D30084D7F0 /* UIView+QuickFrameProperties.swift */,
+				C7367175246159D30084D7F0 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C736718224615FE50084D7F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C736715B246157B30084D7F0 /* BasicViewController.swift */,
+				C7367183246160360084D7F0 /* ScrollViewController.swift */,
+				C736717F24615FC80084D7F0 /* LoginVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C7367185246162A50084D7F0 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C7367186246162C80084D7F0 /* TextFieldFactory.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7367168246157B50084D7F0 /* Build configuration list for PBXNativeTarget "SumAndSubstanceDemo" */;
 			buildPhases = (
+				04E4BC555247B6E0CDFB37A2 /* [CP] Check Pods Manifest.lock */,
 				C7367150246157B30084D7F0 /* Sources */,
 				C7367151246157B30084D7F0 /* Frameworks */,
 				C7367152246157B30084D7F0 /* Resources */,
+				6587C2AA8BF5D3E8476166A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +224,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04E4BC555247B6E0CDFB37A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SumAndSubstanceDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6587C2AA8BF5D3E8476166A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SumAndSubstanceDemo/Pods-SumAndSubstanceDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SumAndSubstanceDemo/Pods-SumAndSubstanceDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SumAndSubstanceDemo/Pods-SumAndSubstanceDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7367150246157B30084D7F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C736715C246157B30084D7F0 /* ViewController.swift in Sources */,
+				C7367187246162C80084D7F0 /* TextFieldFactory.swift in Sources */,
+				C736715C246157B30084D7F0 /* BasicViewController.swift in Sources */,
+				C736717D246159D30084D7F0 /* StyleSheet.swift in Sources */,
+				C736718024615FC80084D7F0 /* LoginVC.swift in Sources */,
+				C736717A246159D30084D7F0 /* UIView+QuickFrameProperties.swift in Sources */,
+				C736717C246159D30084D7F0 /* Utils.swift in Sources */,
+				C736716F246159980084D7F0 /* UIService.swift in Sources */,
+				C736716E246159980084D7F0 /* ServicesProvider.swift in Sources */,
+				C7367184246160360084D7F0 /* ScrollViewController.swift in Sources */,
+				C7367179246159D30084D7F0 /* UINavigationController.swift in Sources */,
+				C736717B246159D30084D7F0 /* UIDevice+Extensions.swift in Sources */,
+				C736717E246159D30084D7F0 /* UIView+ContentPriority.swift in Sources */,
 				C7367158246157B30084D7F0 /* AppDelegate.swift in Sources */,
-				C736715A246157B30084D7F0 /* SceneDelegate.swift in Sources */,
+				C7367178246159D30084D7F0 /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +426,13 @@
 		};
 		C7367169246157B50084D7F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0252EF380E1E5B8454968E34 /* Pods-SumAndSubstanceDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WEU294HD3Y;
 				INFOPLIST_FILE = SumAndSubstanceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +446,13 @@
 		};
 		C736716A246157B50084D7F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58D1E028273D543510479555 /* Pods-SumAndSubstanceDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WEU294HD3Y;
 				INFOPLIST_FILE = SumAndSubstanceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

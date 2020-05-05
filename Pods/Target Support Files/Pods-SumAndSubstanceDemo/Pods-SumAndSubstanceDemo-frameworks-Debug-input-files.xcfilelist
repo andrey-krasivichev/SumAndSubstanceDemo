@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-SumAndSubstanceDemo/Pods-SumAndSubstanceDemo-frameworks.sh
+${PODS_ROOT}/IdensicMobileSDK/IdensicMobileSDK.framework
+${PODS_ROOT}/IdensicMobileSDK/IdensicMobileSDK_Liveness3D.framework
+${PODS_ROOT}/ZoomAuthSDK/ZoomAuthentication.framework

@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IdensicMobileSDK.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IdensicMobileSDK_Liveness3D.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZoomAuthentication.framework
