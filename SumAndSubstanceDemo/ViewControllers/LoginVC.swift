@@ -61,7 +61,7 @@ class LoginVC: ScrollViewController {
         
         self.loginTextField.snp.makeConstraints { (make) in
             make.top.equalTo(self.scrollView).offset(StyleSheet.Offsets.xxxl)
-            make.left.right.equalTo(self.scrollView).inset(StyleSheet.Offsets.l)
+            make.left.right.equalTo(self.view).inset(StyleSheet.Offsets.l)
         }
         
         self.passwordTextField.snp.makeConstraints { (make) in
@@ -118,7 +118,7 @@ class LoginVC: ScrollViewController {
             guard let self = self else {
                 return
             }
-            self.uiService.showErrorAlertMessage(error.localizedDescription)
+            self.uiService.showErrorAlertMessage(error.info)
             self.continueButton.stopLoadingAnimation()
         }
         loginRequest.dataHandler = DataHandlerFactory.jsonDataHandler(jsonHandler: successHandler, parseErrorHandler: errorHandler)

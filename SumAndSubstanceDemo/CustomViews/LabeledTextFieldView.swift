@@ -20,6 +20,8 @@ class LabeledTextFieldView: UIView {
 
     lazy private(set) var textField: UITextField = {
         let textField = UITextField.defaultTextField()
+        textField.leftView = UIView.init(frame: CGRect(x: 0.0, y: 0.0, width: StyleSheet.Offsets.s, height: 0.0))
+        textField.leftViewMode = .always
         self.addSubview(textField)
         return textField
     }()
