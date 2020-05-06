@@ -16,21 +16,4 @@ protocol ApiResponse {
     var errors: [Error] { get }
 }
 
-class LoginResponse: ApiResponse {
-    var data: Data? {
-        didSet {
-            if let data = self.data {
-                self.parseData(data)
-            }
-        }
-    }
-    private(set) var token: String?
-    
-    var isValid: Bool = false
-    var success: Bool = false
-    var errors: [Error] = []
-    
-    private func parseData(_ data: Data) {
-        
-    }
-}
+// concrete expected complex responses can be added here

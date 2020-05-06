@@ -99,7 +99,8 @@ class LoginVC: ScrollViewController {
         }
         self.continueButton.startLoadingAnimation()
         
-        var loginRequest: ApiRequest = ApiRequestFactory.loginRequestWithUsername(name, password: pass)
+        let accessTokenMethod = ApiMethodFactory.accessTokenForApplicantId(applicantId)
+        var loginRequest: ApiRequest = ApiRequestFactory.singedRequestWithMethod(accessTokenMethod)
         let successHandler: ObjectHandler = ObjectHandlerFactory.handlerWithBlock { [weak self] (info) in
             guard
                 let self = self,
