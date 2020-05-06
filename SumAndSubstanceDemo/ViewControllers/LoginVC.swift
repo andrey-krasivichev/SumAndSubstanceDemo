@@ -92,8 +92,8 @@ class LoginVC: ScrollViewController {
     
     @objc private func continueButtonPressed(_ button: UIButton) {
         guard
-            let name = self.loginTextField.textField.text,
-            let pass = self.passwordTextField.textField.text,
+            let name = self.loginTextField.textField.text, name.count > 0,
+            let pass = self.passwordTextField.textField.text, pass.count > 0,
             let applicantId = self.applicantIdentifierTextField.textField.text else {
             return
         }

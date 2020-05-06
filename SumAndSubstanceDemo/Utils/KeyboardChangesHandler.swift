@@ -1,9 +1,9 @@
 //
 //  KeyboardChangesHandler.swift
-//  jWallet
+//  SumAndSubstanceDemo
 //
-//  Created by Andrey Krasivichev on 15/05/2019.
-//  Copyright © 2019 Jibrel. All rights reserved.
+//  Created by Andrey Krasivichev on 05.05.2020.
+//  Copyright © 2020 Andrey Krasivichev. All rights reserved.
 //
 
 import UIKit
